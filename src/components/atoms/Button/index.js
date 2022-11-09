@@ -1,11 +1,18 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  Touchable,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 
-export default function index({type, title}) {
+export default function index({type, title, onPress}) {
   return (
-    <View style={styles.container(type)}>
+    // button with opacity effect
+    <TouchableOpacity style={styles.container(type)} onPress={onPress}>
       <Text style={styles.text(type)}>{title}</Text>
-    </View>
+    </TouchableOpacity>
   );
 }
 
