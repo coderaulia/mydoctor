@@ -19,7 +19,11 @@ export default function GetStarted({navigation}) {
           onPress={() => navigation.navigate('Register')}
         />
         <Gap height={16} />
-        <Button title={'Sign in'} type={'secondary'} />
+        <Button
+          title={'Sign in'}
+          type={'secondary'}
+          onPress={() => navigation.navigate('Login')}
+        />
       </View>
     </ImageBackground>
   );
