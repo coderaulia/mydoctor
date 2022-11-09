@@ -1,9 +1,9 @@
 import {ImageBackground, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {ILLogo, ILGetStarted} from '../../assets/illustration';
-import {Button} from '../../components/atoms';
+import {Button, Gap} from '../../components/atoms';
 
-export default function index() {
+export default function GetStarted() {
   return (
     <ImageBackground source={ILGetStarted} style={styles.page}>
       <View>
@@ -14,7 +14,7 @@ export default function index() {
       </View>
       <View>
         <Button title={'Get Started'} />
-        <View style={{height: 16}} />
+        <Gap height={16} />
         <Button title={'Sign in'} type={'secondary'} />
       </View>
     </ImageBackground>
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   title: {
     marginTop: 91,
     fontSize: 28,
-    fontWeight: 'bold',
     color: 'white',
+    fontFamily: 'Nunito-SemiBold',
   },
 });
