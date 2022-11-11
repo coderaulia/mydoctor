@@ -4,10 +4,10 @@ import Header from '../../components/molecules/Header';
 import {Button, Gap, Input} from '../../components/atoms';
 import {colors} from '../../utils';
 
-export default function Register() {
+export default function Register({navigation}) {
   return (
     <View style={styles.page}>
-      <Header />
+      <Header onPress={() => navigation.goBack()} title="Daftar Akun" />
       <View style={styles.content}>
         <Input label={'Nama Lengkap'} />
         <Gap height={24} />

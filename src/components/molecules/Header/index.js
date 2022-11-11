@@ -1,14 +1,14 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {IconBackDark} from '../../../assets';
-import {Gap} from '../../atoms';
+import {Gap, Button} from '../../atoms';
 import {colors} from '../../../utils';
 
-export default function Header() {
+export default function Header({onPress, title}) {
   return (
     <View style={styles.page}>
-      <IconBackDark />
-      <Text style={styles.text}>Header</Text>
+      {/* determine the button type to icon and back dark */}
+      <Button type="icon-only" icon="back-dark" onPress={onPress} />
+      <Text style={styles.text}>{title}</Text>
       {/* dummy gap matching with the icon */}
       <Gap width={24} />
     </View>
