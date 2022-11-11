@@ -11,13 +11,14 @@ import {
   Messages,
 } from '../pages';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import BottomNavigator from '../components/molecules/BottomNavigator';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const MainApp = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator tabBar={props => <BottomNavigator {...props} />}>
       <Tab.Screen name="Dokter" component={Doctors} />
       <Tab.Screen name="Pesan" component={Messages} />
       <Tab.Screen name="Rumah Sakit" component={Hospitals} />
@@ -28,7 +29,7 @@ const MainApp = () => {
 const Router = () => {
   return (
     // stacking which pages should return first
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="MainApp">
       <Stack.Screen
         name="Splash"
         component={Splash}

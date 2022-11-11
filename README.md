@@ -88,7 +88,7 @@ primary: {
 
 - Call the variable by using `fonts.primary[weight]` example: `fonts.primary[600]`
 
-## Create Button Navigator
+## Create Bottom Tabs Navigator
 
 - Installing dependencies from the official repository `npm install @react-navigation/bottom-tabs`.
 - Import the bottom-tabs and create a new const on the `router` file.
@@ -116,4 +116,18 @@ const MainApp = () => {
   component={MainApp}
   options={{headerShown: false}}
 />
+```
+
+- Create a new component called `BottomNavigator` and you could import from the documentation `https://reactnavigation.org/docs/bottom-tab-navigator`.
+
+- Create a new component called `TabItem`. Then create a conditional component with Icon based on the title props from the BottomNavigator and the Router file:
+
+```javascript
+<TouchableOpacity
+  style={styles.container}
+  onPress={onPress}
+  onLongPress={onLongPress}>
+  <Icon />
+  <Text style={styles.text(active)}>{title}</Text>
+</TouchableOpacity>
 ```
