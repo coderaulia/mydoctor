@@ -5,10 +5,10 @@ import {IconAddPhoto, ILNullPhoto} from '../../assets';
 import {Button, Gap, Link} from '../../components/atoms';
 import {colors, fonts} from '../../utils';
 
-export default function UploadPhoto() {
+export default function UploadPhoto({navigation}) {
   return (
     <View style={styles.page}>
-      <Header title="Unggah Foto" />
+      <Header title="Unggah Foto" onPress={() => navigation.goBack()} />
       <View style={styles.content}>
         <View style={styles.profile}>
           <View style={styles.wrapper}>

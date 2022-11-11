@@ -87,3 +87,33 @@ primary: {
 ```
 
 - Call the variable by using `fonts.primary[weight]` example: `fonts.primary[600]`
+
+## Create Button Navigator
+
+- Installing dependencies from the official repository `npm install @react-navigation/bottom-tabs`.
+- Import the bottom-tabs and create a new const on the `router` file.
+- Creating the MainApp component on the `router` file:
+
+```javascript
+const Tab = createBottomTabNavigator();
+
+const MainApp = () => {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="Dokter" component={Doctors} />
+      <Tab.Screen name="Pesan" component={Messages} />
+      <Tab.Screen name="Rumah Sakit" component={Hospitals} />
+    </Tab.Navigator>
+  );
+};
+```
+
+- Call the MainApp component on the router:
+
+```javascript
+<Stack.Screen
+  name="MainApp"
+  component={MainApp}
+  options={{headerShown: false}}
+/>
+```
