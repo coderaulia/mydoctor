@@ -67,3 +67,23 @@ export default function IconOnly({onPress, icon}) {
 
 const styles = StyleSheet.create({});
 ```
+
+## Creating Dynamic Fonts
+
+- Create a font global variable file on utils/font.
+- Determine each font family and weight:
+
+```javascript
+primary: {
+  200: 'Nunito-ExtraLight',
+  300: 'Nunito-Light',
+  400: 'Nunito-Regular',
+  600: 'Nunito-SemiBold',
+  700: 'Nunito-Bold',
+  800: 'Nunito-ExtraBold',
+  900: 'Nunito-Black',
+  normal: 'Nunito-Regular',
+}
+```
+
+- Call the variable by using `fonts.primary[weight]` example: `fonts.primary[600]`

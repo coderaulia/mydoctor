@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
-import {colors} from '../../../utils';
+import {colors, fonts} from '../../../utils';
 import IconOnly from './IconOnly';
 
 export default function index({type, title, onPress, icon}) {
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   }),
   text: type => ({
     fontSize: 16,
-    fontFamily: 'Nunito-SemiBold',
+    fontFamily: fonts.primary[600],
     textAlign: 'center',
     color:
       type === 'secondary'
