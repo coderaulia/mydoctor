@@ -12,9 +12,21 @@ export default function Hospitals() {
         <Text style={styles.desc}>4 Tersedia</Text>
       </ImageBackground>
       <View style={styles.content}>
-        <ListHospital />
-        <ListHospital />
-        <ListHospital />
+        <ListHospital
+          type="Rumah Sakit"
+          name="Harapan Bunga"
+          address="Jakarta Selatan"
+        />
+        <ListHospital
+          type="Rumah Sakit Anak"
+          name="Bunda Pelita"
+          address="Jakarta Selatan"
+        />
+        <ListHospital
+          type="Rumah Sakit Jiwa"
+          name="Sastrawidjaya"
+          address="Jakarta Selatan"
+        />
       </View>
     </View>
   );
