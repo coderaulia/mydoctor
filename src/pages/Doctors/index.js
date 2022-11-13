@@ -10,7 +10,7 @@ import {
 import {colors, fonts} from '../../utils';
 import {JSONCategoryDoctor} from '../../assets';
 
-export default function Doctors() {
+export default function Doctors({navigation}) {
   return (
     <View style={styles.page}>
       {/* Main content for the border radius */}
@@ -31,7 +31,11 @@ export default function Doctors() {
                 <Gap width={32} />
                 {JSONCategoryDoctor.data.map(item => {
                   return (
-                    <DoctorCategory category={item.category} key={item.id} />
+                    <DoctorCategory
+                      category={item.category}
+                      key={item.id}
+                      onPress={() => navigation.navigate('ChooseDoctor')}
+                    />
                   );
                 })}
                 <Gap width={22} />

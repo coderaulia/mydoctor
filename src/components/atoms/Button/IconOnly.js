@@ -1,6 +1,6 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
-import {IconBackDark} from '../../../assets';
+import {IconBackDark, IconBackLight} from '../../../assets';
 
 export default function IconOnly({onPress, icon}) {
   // icon type conditional
@@ -8,9 +8,8 @@ export default function IconOnly({onPress, icon}) {
     if (icon === 'back-dark') {
       return <IconBackDark />;
     }
-
     if (icon === 'back-light') {
-      return <IconBackDark />;
+      return <IconBackLight />;
     }
     return <IconBackDark />;
   };
